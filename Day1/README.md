@@ -362,3 +362,8 @@ p4 depot -t stream myprojects
 p4 depots
 ```
 
+## Lab - Create a workspace and bind it with your stream
+```
+export P4CLIENT=jegan_ws
+p4 client -S //myprojects/main
+```
