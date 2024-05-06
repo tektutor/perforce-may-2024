@@ -369,9 +369,16 @@ p4 streams
 p4 streams //myprojects/...
 ```
 
-
 ## Lab - Create a workspace and bind it with your stream
 ```
 export P4CLIENT=jegan_ws
 p4 client -S //myprojects/main
+```
+
+## Lab - Troubleshooting - Deleting a depot that has a stream and a client
+```
+p4 streams -a
+p4 client -d jegan_ws
+p4 stream --obliterate -y  //myprojects/main
+p4 depot -d myprojects
 ```
