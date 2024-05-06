@@ -22,11 +22,18 @@ p4 depot -t stream projects
 
 Let's create a stream of type mainline under depot projects
 ```
-p4 stream -t mainline //projects/multi-module-project/main
+p4 stream -t mainline //projects/tektutor/main
 ```
 
 Let's create a client workspace
 ```
 export P4CLIENT=projects_ws
-p4 client -S //projects/multi-module-project/main
+p4 client -S //projects/tektutor/main
+```
+
+Let's add the files
+```
+cd /home/jegan/projects
+p4 add multi-module-project/...
+p4 submit
 ```
