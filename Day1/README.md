@@ -1,7 +1,5 @@
 # Day 1
 
-# Day 1
-
 ## What is Version Control ?
 - also referred as Source Code Management (SCM)
 - helps in managing your project source code changes
