@@ -326,3 +326,19 @@ You need to install
 ```
 sudo apt-get install libxcb-cursor0
 ```
+
+## What is Perforce Repository?
+- container of Perforce depots
+- one Perforce manages just one Perforce Repository
+
+## What is Perforce Depot?
+- Perforce repository has one to many Depots
+- directory structure where Perforce manages the changes done in your project source code
+- can have many subfolders
+
+## What is Perforce workspace?
+
+## What is Perforce changelist?
+
+
+
