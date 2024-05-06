@@ -37,3 +37,32 @@ cd /home/jegan/projects
 p4 add multi-module-project/...
 p4 submit
 ```
+
+## Lab - Deleting depot that has files in it
+In order to delete the depot that has files, we first need to delete the client workspaces
+
+```
+export P4PORT=localhost:1666
+export P4USER=super
+export P4CLIENT=jegan_ws
+
+p4 login
+p4 clients
+p4 client -d jegan_ws
+```
+
+Let's delete the stream associated with the depot
+```
+p4 streams //myprojects/...
+p4 stream --obliterate -y //myprojects/main
+```
+
+Let's delete all the files in the depot
+```
+p4 --obliterate -y //myprojects/main/...
+```
+
+Let's now delete the depot
+```
+p4 depot -d myprojects
+```
