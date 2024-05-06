@@ -10,7 +10,7 @@ Lab machine allotment
 Username        Password   Participant Name
 24MAN0064-01    rps@2345   Kunal
 24MAN0064-02    rps@2345   Abdul Reheman
-24MAN0064-03    rps@2345   
+24MAN0064-03    rps@2345   Raghunath
 24MAN0064-04    rps@2345   Ashwini Prakash
 24MAN0064-05    rps@2345   Nataraj
 24MAN0064-06    rps@2345   Rajesh
