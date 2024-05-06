@@ -435,6 +435,18 @@ export P4CLIENT=jegan_ws
 p4 client -S //myprojects/main
 ```
 
+## Lab - Add files to the stream branch
+```
+cd /home/jegan/myprojects
+git clone https://github.com/tektutor/spring-ms.git
+cd spring-ms
+rm -rf .git
+cd ..
+
+p4 add spring-ms/...
+p4 submit
+```
+
 ## Lab - Troubleshooting - Deleting a depot that has a stream and a client with files
 ```
 p4 streams -a
