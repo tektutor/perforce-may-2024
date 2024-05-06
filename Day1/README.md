@@ -362,6 +362,14 @@ p4 depot -t stream myprojects
 p4 depots
 ```
 
+## Lab - Creating a mainline stream
+```
+p4 stream -t mainline //myprojects/main
+p4 streams
+p4 streams //myprojects/...
+```
+
+
 ## Lab - Create a workspace and bind it with your stream
 ```
 export P4CLIENT=jegan_ws
