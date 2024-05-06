@@ -375,7 +375,7 @@ export P4CLIENT=jegan_ws
 p4 client -S //myprojects/main
 ```
 
-## Lab - Troubleshooting - Deleting a depot that has a stream and a client
+## Lab - Troubleshooting - Deleting a depot that has a stream and a client with files
 ```
 p4 streams -a
 p4 client -d jegan_ws
