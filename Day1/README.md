@@ -1,5 +1,65 @@
 # Day 1
 
+# Day 1
+
+## What is Version Control ?
+- also referred as Source Code Management (SCM)
+- helps in managing your project source code changes
+- when multiple developers works in same project, it is very common to see the same files are modified by multiple developers at the same time, SCM tools comes in handy to resolve conflicts and merging changes made by multiple team members
+
+## What is Perforce ?
+- is one of the Version Control Software tool
+- it is not opensource, however it is free to use for a small team of upto 5 users ( 1 GB Limit upto 20 workspaces )
+- it follows client/server architecture
+- The Perforce server is Helix Core Server and it is supported in below platforms
+  - Mac OS-X
+  - Windows
+  - Linux
+- Perforce Server
+  - comes in two flavours
+- Perforce Clients
+  - comes in two flavours
+    - P4V - Visual Perforce Client (GUI)
+    - p4 - Command-line Perforce Client (CLI)
+  - Supported in
+    - Mac OS-X
+    - Windows
+    - Linux
+
+## Why Perforce ?
+- it easily manages thousands of digital assets and supports over 10,000 concurrent commits
+- is ideal for Game development and Semi-conductor companies which requires support for large files including binary files ( images, videos, etc., )
+- Git supports only source code version tracking, not ideal for binary assets
+- Perforce supports both source code and binary asset version tracking without comprosing performance 
+
+## Perforce High Level Architecture
+
+## Perforce Repository
+- each Perforce server manages a single Repository
+- each Perforce Repository has one or more Depots
+
+## Perforce Depot
+- directory structure that server uses to store historic changes done to files/directories
+- each Depot has an unique name
+- contain one or more folders
+- Only an administrator can create Depots 
+
+## Perforce Workspace
+- copy of files from Perforce Depot to local directory in your system
+- Perforce manages local file changes done in a workspace
+- usually contains a subset of files/directories from Perforce Repository
+
+## About Perforce Changelists
+- normally we don't check-in files one-by-one
+- a single bug fix and enhancement might require modifying server files
+- single changlist tracks multiple file changes
+- a single workspace may have multiple active changelist
+- each changelist might refer a bug fix or enhancement or a patch
+- has an unique numerical identifier
+- also has status, description, date and time, the user who submitted it
+- changelists don't overlap with each other 
+
+
 ## Installing Perforce Server in CentOS/RHEL 9.x
 ```
 sudo rpm --import https://package.perforce.com/perforce.pubkey
