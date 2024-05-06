@@ -22,3 +22,9 @@ Username        Password   Participant Name
 24MAN0064-12    rps@2345   
 24MAN0064-13    rps@2345   
 ```
+
+Ubuntu Login Credentials
+```
+username - rps
+password - rps@123
+```
