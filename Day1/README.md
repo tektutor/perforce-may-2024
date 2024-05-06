@@ -340,5 +340,25 @@ sudo apt-get install libxcb-cursor0
 
 ## What is Perforce changelist?
 
+## Types of Depot
+- local
+- remote
+- stream
 
+## Lab - Finding server configuration details
+```
+p4 info
+```
+
+## Lab - Listing depots in your Perforce Repository
+```
+p4 depots
+```
+
+## Lab - Creating a stream depot
+```
+p4 depots
+p4 depot -t stream myprojects
+p4 depots
+```
 
