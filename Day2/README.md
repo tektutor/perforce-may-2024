@@ -208,3 +208,8 @@ p4 filelog //myprojects/dev1.0/fruits.txt
 ```
 p4 fstat //myprojects/dev1.0/fruits.txt
 ```
+
+## Lab - Using diff
+```
+p4 diff2 //myprojects/dev1.0/fruits.txt#1 //myprojects/dev1.0/fruits.txt#2
+```
