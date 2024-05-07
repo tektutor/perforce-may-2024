@@ -67,18 +67,45 @@ We need enable restricted access to sriram and jegan with p4 protect command.
 
 
 ## Lab - Configuring Perforce Protection table
+The perforce server protection table has a default entry as shown below
+```
+write user * * //...
+```
+
+What it means is, it implies which all users has write permission
+<pre>
+First * - any user
+Second * - from any host/machine
+//... - all depots	
+</pre>	
+
+So, we understand any user from any machine has read/write access to all the depots in the Perforce server.
+We can restrict this by updating the protection table.
 ```
 p4 protect
 ```
 
-Update the proetction table as shown below
+Update the protection table as shown below, the first line is replaced from
+```
+write user * * //...
+```
+
+to
+```
+write group admins * //...
+```
+The above line indicates, only the users who are part of admins group has write permission to all depots in the Perforce server.
+
+The user 'sriram' from any host/machine is given write permission to //myprojects depot.
+The user 'jegan' from any host/machine is given write permission to //test-depot depot.
+
 <pre>
 Protections:
 	write group admins * //...
 	list user * * -//spec/...
 	super user super * //...
 	write user sriram * //myprojects/...
-  write user jegan * //test-depot/...
+        write user jegan * //test-depot/...
 </pre>
 
 In the above protection table, users sriram is given access to myprojects access while user jegan is given access to test-depot project.
