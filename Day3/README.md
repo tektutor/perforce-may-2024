@@ -22,6 +22,21 @@ p4 files //myprojects/main/fruits.txt
 p4 files //myprojects/dev1.0/fruits.txt
 ```
 
+## Lab - Prints sub-directories that appear immediately under the depot one level depth
+```
+p4 dirs //test-depot/*
+```
+
+## Lab - Prints sub-directories that appear two devels down the depot
+```
+p4 dirs //test-depot/*/*
+```
+
+## Lab - Print description of changelist, with list of affected files and their diffs
+```
+p4 changes
+p4 describe 6
+```
 ## Lab - Creating perforce user
 ```
 p4 user -f jegan
