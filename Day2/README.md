@@ -66,3 +66,40 @@ Let's now delete the depot
 ```
 p4 depot -d myprojects
 ```
+
+## Lab - Mapping multiple depots into a single workspace
+
+Clone the TekTutor Perforce Training Repository
+```
+cd ~
+git clone https://github.com/tektutor/perforce-may-2024.git
+```
+
+Let's create our first stream depot
+```
+export P4PORT=localhost:1666
+export P4USER=super
+p4 login
+
+cd ~/perforce-may-2024
+git pull
+
+cd Day2
+cat depot1-depth1.txt | p4 depot -i
+```
+
+Let's create our ond stream depot
+```
+cd ~/perforce-may-2024
+cd Day2
+cat depot2-depth2.txt | p4 depot -i
+```
+
+Let's list the depots to see if the depots are created
+```
+p4 depots
+p4 depot -o projects1
+p4 depot -o projects2
+```
+
+
