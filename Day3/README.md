@@ -1,14 +1,25 @@
 # Day 3
 
-## Lab - Print a depot file revisions
+## Lab - Print a depot file revisions also prints content changes done
 ```
 p4 depots
 p4 print  -a //myprojects/...
 ```
 
-## Lab - Print revisions of a specific file in a depot
+## Lab - Print revisions of a specific file in a depot also prints content changes done
 ```
 p4 print  -a //myprojects/main/fruits.txt
+```
+
+## Lab - Print revisions of files in a depot without accessing the content of the files
+```
+p4 files  -a //myprojects/main/fruits.txt
+```
+
+## Lab - Print revisions of files in a depot without accessing the content of the files
+```
+p4 files //myprojects/main/fruits.txt
+p4 files //myprojects/dev1.0/fruits.txt
 ```
 
 ## Lab - Creating perforce user
