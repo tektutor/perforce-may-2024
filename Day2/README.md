@@ -199,3 +199,12 @@ p4 changes -s submitted
 p4 changes -s shelved
 ```
 
+## Lab - Using filelog
+```
+p4 filelog //myprojects/dev1.0/fruits.txt
+```
+
+## Lab - Using fstat
+```
+p4 fstat //myprojects/dev1.0/fruits.txt
+```
