@@ -65,6 +65,31 @@ p4 login
 
 We need enable restricted access to sriram and jegan with p4 protect command.
 
+## Lab - Creating user group called 'admins'
+```
+p4 group admins
+```
+
+Update the  group definition as shown below
+<pre>
+Group:	admins
+Description:
+	Only these users will be able to perform user management
+
+MaxResults:		unlimited
+MaxScanRows:		unlimited
+MaxLockTime:		unlimited
+MaxOpenFiles:		unlimited
+MaxMemory:		unlimited
+Timeout:		43200
+PasswordTimeout:	unlimited
+Subgroups:
+Owners:
+Users:
+	jegan
+	super	
+</pre>
+
 
 ## Lab - Configuring Perforce Protection table
 The perforce server protection table has a default entry as shown below
