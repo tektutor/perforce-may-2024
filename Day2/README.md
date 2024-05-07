@@ -213,3 +213,23 @@ p4 fstat //myprojects/dev1.0/fruits.txt
 ```
 p4 diff2 //myprojects/dev1.0/fruits.txt#1 //myprojects/dev1.0/fruits.txt#2
 ```
+
+## Lab - Creating dev stream using CLI command
+```
+p4 depot -t stream test-depot
+p4 stream -t mainline //test-depot/main
+
+cd ~
+mkdir ~/test
+cd test
+
+p4 client -s -S //test-depot/main 
+
+p4 stream -t development -P //test-depot/main //test-depot/dev1.0
+```
+
+## Lab - Populating workspace from commandline
+```
+p4 populate -r -S //test-depot/rel1.0
+p4 sync
+```
