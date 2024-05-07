@@ -59,7 +59,7 @@ p4 stream --obliterate -y //myprojects/main
 
 Let's delete all the files in the depot
 ```
-p4 --obliterate -y //myprojects/main/...
+p4 obliterate -y //myprojects/main/...
 ```
 
 Let's now delete the depot
@@ -183,3 +183,19 @@ Let's switch to /home/jegan/projects( This is the root folder the jegan_ws point
 p4 set P4CLIENT=jegan_ws
 p4 sync
 ```
+
+## Lab - Find all the changelists in pending state
+```
+p4 changes -s pending
+```
+
+## Lab - Find all the changelists in submitted state
+```
+p4 changes -s submitted
+```
+
+## Lab - Find all the changelists in shelved state
+```
+p4 changes -s shelved
+```
+
