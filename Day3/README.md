@@ -37,6 +37,13 @@ p4 dirs //test-depot/*/*
 p4 changes
 p4 describe 6
 ```
+
+## Lab - Prints each line of the file along with the revision details when each of those line were introduced
+```
+p4 annotate -c //myprojects/dev1.0/fruits.txt
+```
+
+
 ## Lab - Creating perforce user
 ```
 p4 user -f jegan
