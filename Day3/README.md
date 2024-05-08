@@ -148,3 +148,10 @@ export P4USER=jegan
 p4 login
 p4 depots
 ```
+
+## Lab - Create a remote depot
+
+Reference
+<pre>
+https://www.perforce.com/perforce/doc.072/manuals/p4sag/03_superuser.html	
+</pre>
