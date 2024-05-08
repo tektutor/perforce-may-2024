@@ -4,18 +4,16 @@
 ```
 p4 depots
 p4 print  -a //myprojects/...
-
-
-p4 print -m 2 -a //myprojects/main/fruits.txt#1
-p4 print -m 2 -a //myprojects/main/fruits.txt#2
-p4 print -m 2 -a //myprojects/main/fruits.txt#3
-p4 print -m 2 -a //myprojects/main/fruits.txt#4
-
 ```
 
 ## Lab - Print revisions of a specific file in a depot also prints content changes done
 ```
 p4 print  -a //myprojects/main/fruits.txt
+
+p4 print -m 2 -a //myprojects/main/fruits.txt#1
+p4 print -m 2 -a //myprojects/main/fruits.txt#2
+p4 print -m 2 -a //myprojects/main/fruits.txt#3
+p4 print -m 2 -a //myprojects/main/fruits.txt#4
 ```
 
 ## Lab - Print revisions of files in a depot without accessing the content of the files
