@@ -158,5 +158,7 @@ p4 depots
 
 Reference
 <pre>
-https://www.perforce.com/perforce/doc.072/manuals/p4sag/03_superuser.html	
+https://www.perforce.com/perforce/doc.072/manuals/p4sag/03_superuser.html
+	
+https://portal.perforce.com/s/article/2459
 </pre>
