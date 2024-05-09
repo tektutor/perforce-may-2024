@@ -127,5 +127,66 @@ p4 admin start
 
 cd /opt/perforce/sbin
 ./p4d -r $P4ROOT -jr checkpoint_file journal_file
-
 ```
+
+## Lab - Multi-site Perforce installation
+
+We need atleast 2 linux machines.  On, one of the linux machines we will run the Perforce server and on the linux machine we will setup helix proxy server.  In my case, the ubuntu virtual machine will act like a helix proxy server.
+
+To install helix proyx server
+```
+sudo apt-get install helix-proxy -y
+```
+
+Expected output
+<pre>
+root@perforce-server-2:/# apt-get install helix-proxy -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  helix-proxy-base
+The following NEW packages will be installed:
+  helix-proxy helix-proxy-base
+0 upgraded, 2 newly installed, 0 to remove and 9 not upgraded.
+Need to get 3,491 kB of archives.
+After this operation, 8,160 kB of additional disk space will be used.
+Get:1 http://package.perforce.com/apt/ubuntu focal/release amd64 helix-proxy-base amd64 2023.2-2578891~focal [3,483 kB]
+Get:2 http://package.perforce.com/apt/ubuntu focal/release amd64 helix-proxy amd64 2023.2-2578891~focal [7,796 B]
+Fetched 3,491 kB in 4s (952 kB/s)
+Selecting previously unselected package helix-proxy-base.
+(Reading database ... 153770 files and directories currently installed.)
+Preparing to unpack .../helix-proxy-base_2023.2-2578891~focal_amd64.deb ...
+Unpacking helix-proxy-base (2023.2-2578891~focal) ...
+Selecting previously unselected package helix-proxy.
+Preparing to unpack .../helix-proxy_2023.2-2578891~focal_amd64.deb ...
+Unpacking helix-proxy (2023.2-2578891~focal) ...
+Setting up helix-proxy-base (2023.2-2578891~focal) ...
+Setting up helix-proxy (2023.2-2578891~focal) ...
+linking /opt/perforce/sbin/p4p to /usr/sbin/p4p
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::
+::  Thank you for choosing Perforce Helix
+::  The following has been installed by the 'helix-proxy' package:
+::
+::  - The Helix Proxy (p4p)
+::  - A 'perforce' system user
+::  - p4dctl, a tool for managing Perforce service instances
+::  - The Helix Command-Line Client (p4)
+::
+::  The Helix Proxy is now installed, but not yet configured.
+::  To configure a new Proxy instance, copy the p4dctl Proxy
+::  template to a new file, fill in the placeholders and make the
+::  Proxy root directory.
+::
+::    sudo -u perforce sh -c \
+::      "cp /etc/perforce/p4dctl.conf.d/p4p.template \
+::          /etc/perforce/p4dctl.conf.d/p4p-master.conf; \
+::      mkdir /opt/perforce/servers/p4p-master"
+::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Started 0 services.
+Processing triggers for man-db (2.12.0-4build2) ...
+</pre>
