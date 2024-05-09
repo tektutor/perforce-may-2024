@@ -58,6 +58,9 @@ p4 shelve -c 20
 ```
 
 ## Lab - unshelve shelved changes to resume working in workspace
+
+This is useful to resume working on bug fix changes that were parked earlier in depot.
+
 Find all the shelved changes
 ```
 p4 changes -s pending
@@ -67,4 +70,16 @@ p4 revert
 Unshelve them now ( in the below 20 is the changelist number that was previously shelved
 ```
 p4 unshelve -S 20
+```
+
+## Lab - Display information about changelist
+```
+p4 changes
+p4 describe 21
+```
+
+## Lab - Undo submitted changes
+```
+p4 changes
+p4 undo @16
 ```
