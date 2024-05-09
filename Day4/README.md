@@ -133,7 +133,7 @@ cd /opt/perforce/sbin
 
 We need atleast 2 linux machines.  On, one of the linux machines we will run the Perforce server and on the linux machine we will setup helix proxy server.  In my case, the ubuntu virtual machine will act like a helix proxy server.
 
-To install helix proyx server
+To install helix proyx server2
 ```
 sudo apt-get install helix-proxy -y
 ```
@@ -190,3 +190,9 @@ linking /opt/perforce/sbin/p4p to /usr/sbin/p4p
 Started 0 services.
 Processing triggers for man-db (2.12.0-4build2) ...
 </pre>
+
+We need to configure helix proxy server on server 2
+```
+mkdir -p /var/proxyroot
+p4p -p tcp64:[::]:1999 -t 172.20.10.5:1666 -r /var/proxyroot
+```
