@@ -89,3 +89,8 @@ p4 undo @16
 p4 files //myprojects/rel-1.0/...
 p4 diff //myprojects/rel-1.0/spring-ms/pom.xml#3 //myprojects/rel-1.0/spring-ms/pom.xml#1
 ```
+
+## Lab - Backup and Recovery or Moving Perforce server from one machine to another
+```
+https://ftp.perforce.com/perforce/r16.2/doc/manuals/p4sag/appendix.moving.html
+```
