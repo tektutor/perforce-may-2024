@@ -94,3 +94,38 @@ p4 diff //myprojects/rel-1.0/spring-ms/pom.xml#3 //myprojects/rel-1.0/spring-ms/
 ```
 https://ftp.perforce.com/perforce/r16.2/doc/manuals/p4sag/appendix.moving.html
 ```
+
+Find the perforce server's root folder
+```
+p4 info
+```
+
+On the old(source) server as administrator, navigate to perforce server root folder. This will create a checkpoint file (text)
+```
+cd /opt/perforce/sbin
+./p4d -r /opt/perforce/servers/perforce-server-1/root -jc
+```
+
+Expected output
+<pre>
+root@perforce-server-1:/opt/perforce/sbin# ./p4d -r /opt/perforce/servers/perforce-server-1/root -jc
+Checkpointing to ../journals/perforce-server-1.ckp.1...
+MD5 (../journals/perforce-server-1.ckp.1) = B079826BA9AD6A716E2E56FB187FF85C
+Rotating ../journals/journal to ../journals/perforce-server-1.jnl.0...  
+</pre>
+
+You need to copy the checkpoint file to the new server to recover/migrate from /opt/perforce/servers/perforce-server-1/journals and the file name is perforce-server-1.ckp.1.  The checkpoint file will be named against your perforce server serverid.
+
+On the new(destination) server as administrator, navigate to perforce server root folder. 
+```
+p4 admin stop
+
+mv your_root_dir/db.* /tmp
+
+p4 admin start
+
+
+cd /opt/perforce/sbin
+./p4d -r $P4ROOT -jr checkpoint_file journal_file
+
+```
