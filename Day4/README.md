@@ -13,8 +13,6 @@ p4 tag -l v2.0 //myprojects/dev-1.0/...@15
 ## Lab - Listing files that has a specific label tag
 ```
 p4 files @v1.0p4 shelve -c 77 ....html "*.c" "*.java"
-
-
 ```
 
 Expected output
@@ -57,4 +55,15 @@ p4 filelog //myprojects/rel-1.0/spring-ms/pom.xml
 Now let's shelve these changes in perforce depot without committing them
 ```
 p4 shelve
+```
+
+## Lab - unshelve shelved changes to resume working in workspace
+Find all the shelved changes
+```
+p4 changes -s pending
+```
+
+Unshelve them now ( in the below 20 is the changelist number that was previously shelved
+```
+p4 unshelve -S 20
 ```
