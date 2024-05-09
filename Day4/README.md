@@ -12,7 +12,9 @@ p4 tag -l v2.0 //myprojects/dev-1.0/...@15
 
 ## Lab - Listing files that has a specific label tag
 ```
-p4 files @v1.0
+p4 files @v1.0p4 shelve -c 77 ....html "*.c" "*.java"
+
+
 ```
 
 Expected output
@@ -35,4 +37,24 @@ p4 opened -a
 Let's discard the changes done in workspace by using revert
 ```
 p4 revert //myprojects/rel-1.0/spring-ms/pom.xml
+```
+
+## Lab - Perforce shelve
+What it does ? - Stores files from a pending changelist in the depot without submitting them
+
+What it is the use ? - You can temporarily store the changes you did in Perforce server without committing your changes
+
+Find which changelists are in pending status (i.e - changelist that are yet to be submitted )
+```
+p4 changes -s pending
+```
+
+Find the revisions of a file
+```
+p4 filelog //myprojects/rel-1.0/spring-ms/pom.xml
+```
+
+Now let's shelve these changes in perforce depot without committing them
+```
+p4 shelve
 ```
