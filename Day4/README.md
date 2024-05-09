@@ -54,13 +54,14 @@ p4 filelog //myprojects/rel-1.0/spring-ms/pom.xml
 
 Now let's shelve these changes in perforce depot without committing them
 ```
-p4 shelve
+p4 shelve -c 20
 ```
 
 ## Lab - unshelve shelved changes to resume working in workspace
 Find all the shelved changes
 ```
 p4 changes -s pending
+p4 revert
 ```
 
 Unshelve them now ( in the below 20 is the changelist number that was previously shelved
