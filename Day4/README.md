@@ -83,3 +83,9 @@ p4 describe 21
 p4 changes
 p4 undo @16
 ```
+
+## Lab - Diff
+```
+p4 files //myprojects/rel-1.0/...
+p4 diff //myprojects/rel-1.0/spring-ms/pom.xml#3 //myprojects/rel-1.0/spring-ms/pom.xml#1
+```
