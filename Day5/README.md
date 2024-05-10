@@ -24,6 +24,8 @@ sudo su $USER
 
 
 ## Lab - Building Custom Docker image to run helix-proxy server
+
+Before you proceed to build the image, you need to edit the Dockerfile and update the IP '172.20.10.5' to your RPS lab machine IPAddress '192.168.5.x', the x would vary for each one of you.
 ```
 cd ~/perforce-may-2024
 git pull
@@ -34,4 +36,13 @@ docker build -t tektutor/helix-proxy:latest .
 Check if the image is built successfully
 ```
 docker images
+```
+
+## Lab - Create Perforce helix proxy server container
+```
+docker run -d --name helix-proxy --hostname helix-proxy tektutor/helix-proxy:latest
+docker ps
+docker inspect -f {{.NetworkSettings.IPAddress}} helix-proxy 
+export P4PORT=172.17.0.2:1999
+p4 ports
 ```
