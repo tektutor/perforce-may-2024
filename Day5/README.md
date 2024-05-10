@@ -44,5 +44,6 @@ docker run -d --name helix-proxy --hostname helix-proxy tektutor/helix-proxy:lat
 docker ps
 docker inspect -f {{.NetworkSettings.IPAddress}} helix-proxy 
 export P4PORT=172.17.0.2:1999
-p4 ports
+p4 info
+p4 depots
 ```
