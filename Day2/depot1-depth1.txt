@@ -1,0 +1,8 @@
+Depot:          projects1 
+Owner:          super
+Description:
+                Created by super
+
+Type:           stream
+StreamDepth:    //projects1/1
+Map:            projects1/...

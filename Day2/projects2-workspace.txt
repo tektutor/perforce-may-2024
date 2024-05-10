@@ -1,0 +1,15 @@
+Client: projects2_ws	
+Owner:	super
+Host:	tektutor.org  #You need to modify this to suit your rps hostname
+
+Description:
+	Created by super.
+
+Root:	/home/jegan/projects2  # You need update this to /home/rps/projects1
+Options:	noallwrite noclobber nocompress unlocked nomodtime normdir noaltsync
+SubmitOptions:	submitunchanged
+LineEnd:	local
+Stream: //projects2/tektutor/main
+
+View:
+	//projects2/tektutor/main/... //projects2_ws/...
