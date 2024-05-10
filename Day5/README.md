@@ -1,5 +1,11 @@
 # Day 5
 
+## Lab - Cloning this TekTutor Perforce Training Repository ( only the first time )
+```
+cd ~
+git clone https://github.com/tektutor/perforce-may-2024.git
+```
+
 ## Lab - Installing Docker Community Edition in Ubuntu 
 ```
 # Add Docker's official GPG key:
