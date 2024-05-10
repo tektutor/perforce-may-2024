@@ -53,3 +53,9 @@ export P4PORT=172.17.0.2:1999
 p4 info
 p4 depots
 ```
+
+Open the first terminal window and try this
+![Directly access server](img1.png)
+
+On the second terminal window, try this
+![Remote user will use the proxy server](img2.png)
