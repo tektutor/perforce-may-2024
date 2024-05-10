@@ -13,4 +13,4 @@ RUN apt update && apt-get install helix-proxy -y
 
 RUN mkdir -p /var/proxyroot
 
-CMD [ "p4p", "-p tcp64:[::]:1999", "-t 172.20.10.5:1666", "-r /var/proxyroot"]
+CMD [ "p4p", "-p", "tcp64:[::]:1999", "-t", "172.20.10.5:1666", "-r", "/var/proxyroot"]
