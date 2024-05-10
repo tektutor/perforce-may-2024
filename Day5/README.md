@@ -55,7 +55,7 @@ p4 depots
 ```
 
 Open the first terminal window and try this
-![Directly access server](img1.png)
+![Directly access server](img3.png)
 
 On the second terminal window, try this
 ![Remote user will use the proxy server](img2.png)
