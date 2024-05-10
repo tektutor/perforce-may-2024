@@ -131,6 +131,8 @@ cd /opt/perforce/sbin
 
 ## Lab - Multi-site Perforce installation
 
+For detailed instructions refer the official page here https://www.perforce.com/manuals/p4dist/Content/P4Dist/chapter.concepts.html
+
 We need atleast 2 linux machines.  On, one of the linux machines we will run the Perforce server and on the linux machine we will setup helix proxy server.  In my case, the ubuntu virtual machine will act like a helix proxy server.
 
 To install helix proyx server2
